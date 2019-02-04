@@ -10,12 +10,22 @@
 
         .container {
             display: grid;
-            grid-template-columns: 33% 33% 33%;
+            /*grid-template-columns: 33% 33% 33%;
+            grid-template-rows: 200px 200px;*/
+            grid-template: repeat(3,20px)/33% 33% 33%;
         }
+
         .item {
             background: lawngreen;
             padding: 10px;
             border: 1px solid red;
+        }
+
+        .item:nth-of-type(4) {
+            overflow: auto;
+            background: rgb(218, 216, 216);
+            display: grid;
+            grid-template: repeat(3,20px)/33% 33% 33%;
         }
     </style>
 </head>
@@ -25,10 +35,19 @@
         <div class="item">contenido #1</div>
         <div class="item">contenido #2</div>
         <div class="item">contenido #3</div>
-        <div class="item">contenido #4</div>
+        <div class="item">
+            <div class="item">subitem #1</div>
+            <div class="item">subitem #2</div>
+            <div class="item">subitem #3</div>
+            <div class="item">subitem #4</div>
+            <div class="item">subitem #5</div>
+            <div class="item">subitem #6</div>
+        </div>
         <div class="item">contenido #5</div>
         <div class="item">contenido #6</div>
-        <div class="item">contenido #7</div>
+        <div class="item">
+
+        </div>
         <div class="item">contenido #8</div>
         <div class="item">contenido #9</div>
         <div class="item">contenido #10</div>
